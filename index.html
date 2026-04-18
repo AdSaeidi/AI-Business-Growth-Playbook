@@ -1,0 +1,652 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ── PRIMARY SEO ── -->
+  <title>The AI Business Growth Playbook — Know What to Automate, Why, and How</title>
+  <meta name="description" content="Most business owners who've tried AI automation haven't seen the results they expected. This playbook gives you a clear, step-by-step system: audit your operations, decide what to automate first, and build AI-powered workflows that actually drive growth." />
+  <meta name="keywords" content="AI automation, The AI Business Growth Playbook, AI business systems, business automation playbook, what to automate in your business, AI for small business, business systemization, solopreneur AI, AI workflow design" />
+  <meta name="author" content="Ahad Saeidi" />
+  <link rel="canonical" href="https://solopreneurac.com" />
+
+  <!-- ── OPEN GRAPH (LinkedIn / Facebook) ── -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://solopreneurac.com" />
+  <meta property="og:title" content="The AI Business Growth Playbook" />
+  <meta property="og:description" content="Before you automate anything — you need to know what's worth automating. A step-by-step playbook for business owners who've tried AI and didn't see the results they expected." />
+  <meta property="og:image" content="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO/main/The AI Business Growth Playbook.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:site_name" content="Solopreneur Academy" />
+  <meta property="og:locale" content="en_US" />
+
+  <!-- ── TWITTER / X CARD ── -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@Ad_Saeidi" />
+  <meta name="twitter:creator" content="@Ad_Saeidi" />
+  <meta name="twitter:title" content="The AI Business Growth Playbook" />
+  <meta name="twitter:description" content="Before you automate anything — you need to know what's worth automating. Join the waitlist and get the playbook first." />
+  <meta name="twitter:image" content="https://raw.githubusercontent.com/YOUR_GITHUB_USERNAME/YOUR_REPO/main/The AI Business Growth Playbook.jpg" />
+
+  <!-- ── STRUCTURED DATA ── -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Book",
+    "name": "The AI Business Growth Playbook",
+    "description": "A step-by-step playbook for business owners who want to know exactly which parts of their business to automate, why, and how — so AI drives growth instead of more confusion.",
+    "author": {
+      "@type": "Person",
+      "name": "Ahad Saeidi",
+      "url": "https://www.linkedin.com/in/ahadsaeidi/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Solopreneur Academy",
+      "url": "https://solopreneurac.com"
+    },
+    "inLanguage": "en",
+    "genre": "Business & Entrepreneurship"
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Geist:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy:   #07121F;
+      --teal:   #00C4B3;
+      --lime:   #C5FF3E;
+      --white:  #F2F1EC;
+      --muted:  #7A8FA3;
+      --border: rgba(255,255,255,0.07);
+      --card:   rgba(255,255,255,0.035);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+
+    body {
+      background-color: var(--navy);
+      color: var(--white);
+      font-family: 'Geist', sans-serif;
+      font-weight: 400;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    /* ── TEXTURE ── */
+    body::before {
+      content: '';
+      position: fixed; inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.035'/%3E%3C/svg%3E");
+      pointer-events: none; z-index: 0; opacity: 0.4;
+    }
+
+    /* ── GLOW ORBS ── */
+    .glow-1, .glow-2 {
+      position: fixed; pointer-events: none; z-index: 0; border-radius: 50%;
+    }
+    .glow-1 {
+      top: -15%; right: -8%; width: 600px; height: 600px;
+      background: radial-gradient(circle, rgba(0,196,179,0.10) 0%, transparent 70%);
+    }
+    .glow-2 {
+      bottom: 10%; left: -15%; width: 500px; height: 500px;
+      background: radial-gradient(circle, rgba(197,255,62,0.05) 0%, transparent 70%);
+    }
+
+    /* ── LAYOUT ── */
+    .wrap {
+      position: relative; z-index: 1;
+      max-width: 720px; margin: 0 auto; padding: 0 24px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      padding: 32px 0 0;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .logo {
+      font-family: 'Geist', sans-serif; font-weight: 600;
+      font-size: 13px; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--white); text-decoration: none;
+    }
+    .logo span { color: var(--teal); }
+    .badge {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--navy);
+      background: var(--lime); padding: 4px 11px; border-radius: 100px;
+    }
+
+    /* ── HERO ── */
+    .hero { padding: 68px 0 52px; }
+
+    .hero-label {
+      display: inline-flex; align-items: center; gap: 10px;
+      font-size: 12px; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 28px;
+    }
+    .hero-label::before {
+      content: ''; display: block; width: 22px; height: 1px; background: var(--teal);
+    }
+
+    h1 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(34px, 6vw, 56px);
+      font-weight: 400; line-height: 1.1; letter-spacing: -0.02em;
+      color: var(--white); margin-bottom: 22px;
+    }
+    h1 em { font-style: italic; color: var(--teal); }
+
+    .hero-sub {
+      font-size: 17px; color: var(--muted);
+      max-width: 560px; line-height: 1.75; margin-bottom: 44px;
+    }
+    .hero-sub strong { color: var(--white); font-weight: 500; }
+
+    /* ── FORM BLOCK ── */
+    .form-block {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border); border-radius: 16px;
+      padding: 28px 28px 24px; margin-bottom: 52px;
+      backdrop-filter: blur(10px);
+    }
+    .form-block > p {
+      font-size: 14px; color: var(--muted); margin-bottom: 18px;
+    }
+    .form-block > p strong { color: var(--white); font-weight: 600; }
+
+    .form-row {
+      display: flex; gap: 10px; flex-wrap: wrap;
+    }
+    .form-row input[type="email"] {
+      flex: 1; min-width: 200px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.11);
+      border-radius: 10px; padding: 13px 16px;
+      font-family: 'Geist', sans-serif; font-size: 15px;
+      color: var(--white); outline: none; transition: border-color 0.2s;
+    }
+    .form-row input[type="email"]::placeholder { color: var(--muted); }
+    .form-row input[type="email"]:focus { border-color: var(--teal); }
+
+    .btn-submit {
+      background: var(--lime); color: var(--navy);
+      border: none; border-radius: 10px; padding: 13px 26px;
+      font-family: 'Geist', sans-serif; font-size: 15px; font-weight: 600;
+      cursor: pointer; white-space: nowrap;
+      transition: transform 0.15s, opacity 0.15s;
+    }
+    .btn-submit:hover { opacity: 0.87; transform: translateY(-1px); }
+    .btn-submit:active { transform: translateY(0); }
+
+    .form-note {
+      font-size: 12px; color: var(--muted);
+      margin-top: 11px; display: block;
+    }
+
+    /* ── SUCCESS ── */
+    .success-msg { display: none; text-align: center; padding: 12px 0 4px; }
+    .success-msg .check {
+      display: inline-flex; align-items: center; justify-content: center;
+      width: 42px; height: 42px; border-radius: 50%;
+      background: rgba(197,255,62,0.10); border: 1px solid var(--lime);
+      margin-bottom: 12px; font-size: 18px;
+    }
+    .success-msg h3 {
+      font-family: 'Instrument Serif', serif; font-size: 20px;
+      font-weight: 400; color: var(--white); margin-bottom: 6px;
+    }
+    .success-msg p { font-size: 14px; color: var(--muted); }
+
+    /* ── DIVIDER ── */
+    .divider { width: 40px; height: 1px; background: var(--border); margin: 0 0 44px; }
+
+    /* ── SECTIONS ── */
+    .section { margin-bottom: 52px; }
+
+    .section-label {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.12em;
+      text-transform: uppercase; color: var(--teal); margin-bottom: 14px;
+    }
+
+    h2 {
+      font-family: 'Instrument Serif', serif;
+      font-size: clamp(22px, 3.5vw, 30px);
+      font-weight: 400; line-height: 1.25; letter-spacing: -0.01em;
+      color: var(--white); margin-bottom: 14px;
+    }
+
+    p {
+      font-size: 16px; color: var(--muted);
+      line-height: 1.75; margin-bottom: 13px;
+    }
+    p strong { color: var(--white); font-weight: 500; }
+    p:last-child { margin-bottom: 0; }
+
+    /* ── PROBLEM LIST ── */
+    .problem-list {
+      list-style: none; display: flex;
+      flex-direction: column; gap: 10px; margin-top: 18px;
+    }
+    .problem-list li {
+      display: flex; align-items: flex-start; gap: 13px;
+      font-size: 15px; color: var(--muted); line-height: 1.6;
+    }
+    .problem-list li::before {
+      content: ''; flex-shrink: 0; margin-top: 9px;
+      width: 4px; height: 4px; border-radius: 50%;
+      background: rgba(255,255,255,0.18);
+    }
+
+    /* ── QUOTE ── */
+    .quote-block {
+      border-left: 2px solid var(--teal);
+      padding: 5px 0 5px 20px; margin: 24px 0;
+    }
+    .quote-block p {
+      font-family: 'Instrument Serif', serif;
+      font-size: 19px; font-style: italic;
+      color: var(--white); line-height: 1.5; margin-bottom: 0;
+    }
+
+    /* ── INSIDE BOX ── */
+    .inside-box {
+      border: 1px solid var(--border);
+      border-radius: 14px; overflow: hidden; margin-top: 22px;
+    }
+    .inside-box-header {
+      background: rgba(0,196,179,0.06);
+      border-bottom: 1px solid var(--border);
+      padding: 13px 20px;
+      font-size: 11px; font-weight: 500;
+      letter-spacing: 0.09em; text-transform: uppercase; color: var(--teal);
+    }
+    .inside-item {
+      display: flex; align-items: flex-start; gap: 16px;
+      padding: 16px 20px; border-bottom: 1px solid var(--border);
+    }
+    .inside-item:last-child { border-bottom: none; }
+    .inside-num {
+      flex-shrink: 0; width: 24px; height: 24px; border-radius: 6px;
+      background: rgba(197,255,62,0.08); border: 1px solid rgba(197,255,62,0.18);
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 600; color: var(--lime); margin-top: 1px;
+    }
+    .inside-text { font-size: 15px; color: var(--muted); line-height: 1.6; }
+    .inside-text strong {
+      display: block; color: var(--white); font-weight: 500; margin-bottom: 3px;
+    }
+
+    /* ── CRED ── */
+    .cred-block {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: 14px; padding: 24px;
+      display: flex; gap: 20px; align-items: flex-start; margin-top: 22px;
+    }
+    .cred-avatar {
+      flex-shrink: 0; width: 52px; height: 52px; border-radius: 50%;
+      overflow: hidden; border: 2px solid rgba(0,196,179,0.25);
+      background: linear-gradient(135deg, #0d2a40, #0a4040);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .cred-avatar img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+    }
+    .cred-avatar .avatar-fallback {
+      font-family: 'Instrument Serif', serif;
+      font-size: 22px; color: var(--teal);
+    }
+    .cred-name {
+      font-size: 14px; font-weight: 600; color: var(--white); margin-bottom: 5px;
+    }
+    .cred-tag {
+      font-size: 12px; color: var(--teal); letter-spacing: 0.04em;
+      margin-bottom: 10px; display: block;
+    }
+    .cred-text p { font-size: 14px; line-height: 1.7; color: var(--muted); margin-bottom: 0; }
+
+    /* ── BOTTOM CTA ── */
+    .bottom-cta {
+      background: rgba(0,196,179,0.04);
+      border: 1px solid rgba(0,196,179,0.12);
+      border-radius: 16px; padding: 40px 32px;
+      text-align: center; margin-bottom: 60px;
+    }
+    .bottom-cta h2 { font-size: clamp(20px, 3vw, 26px); margin-bottom: 9px; }
+    .bottom-cta p { font-size: 15px; max-width: 420px; margin: 0 auto 22px; }
+    .bottom-cta .form-row { justify-content: center; max-width: 460px; margin: 0 auto; }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 22px 0 40px;
+      display: flex; justify-content: space-between;
+      align-items: center; flex-wrap: wrap; gap: 14px;
+    }
+    .footer-left p { font-size: 13px; color: var(--muted); margin: 0; }
+    .footer-left a { color: var(--muted); text-decoration: none; }
+    .footer-left a:hover { color: var(--white); }
+
+    .social-links { display: flex; gap: 14px; align-items: center; }
+    .social-links a {
+      display: flex; align-items: center; justify-content: center;
+      width: 34px; height: 34px; border-radius: 8px;
+      border: 1px solid var(--border); color: var(--muted);
+      text-decoration: none; transition: color 0.2s, border-color 0.2s;
+    }
+    .social-links a:hover { color: var(--white); border-color: rgba(255,255,255,0.2); }
+    .social-links svg { width: 15px; height: 15px; fill: currentColor; }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(18px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .fade-up { animation: fadeUp 0.55s ease both; }
+    .fade-up:nth-child(1) { animation-delay: 0.05s; }
+    .fade-up:nth-child(2) { animation-delay: 0.13s; }
+    .fade-up:nth-child(3) { animation-delay: 0.22s; }
+    .fade-up:nth-child(4) { animation-delay: 0.31s; }
+    .fade-up:nth-child(5) { animation-delay: 0.40s; }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 560px) {
+      .form-row { flex-direction: column; }
+      .form-row input[type="email"], .btn-submit { width: 100%; }
+      .form-block { padding: 22px 18px 20px; }
+      .bottom-cta { padding: 30px 18px; }
+      .cred-block { flex-direction: column; }
+      .inside-item { padding: 14px 16px; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="glow-1"></div>
+<div class="glow-2"></div>
+
+<div class="wrap">
+
+  <!-- NAV -->
+  <nav class="fade-up">
+    <a href="https://solopreneurac.com" class="logo">Solopreneur<span>Academy</span></a>
+    <span class="badge">Building in public</span>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-label fade-up">New Playbook — Coming Soon</div>
+
+    <h1 class="fade-up">
+      Before you automate anything —<br>
+      <em>know what's worth automating.</em>
+    </h1>
+
+    <p class="hero-sub fade-up">
+      Most business owners who've tried AI end up with more tools, more complexity, and <strong>no real outcome.</strong>
+      The problem isn't the technology. It's starting without a map.
+    </p>
+
+    <!-- HERO FORM -->
+    <div class="form-block fade-up" id="hero-form-wrap">
+      <p><strong>The AI Business Growth Playbook</strong> is in progress. Join the list — get it the moment it's ready.</p>
+
+      <form id="hero-form" action="YOUR_BREVO_FORM_ACTION_URL" method="POST" onsubmit="handleSubmit(event,'hero-form-wrap','hero-success')">
+        <input type="hidden" name="list" value="YOUR_LIST_ID" />
+        <div class="form-row">
+          <input type="email" name="EMAIL" placeholder="Your work email" required autocomplete="email" />
+          <button type="submit" class="btn-submit">Get It First →</button>
+        </div>
+        <span class="form-note">One email when it's ready. No spam, ever.</span>
+      </form>
+
+      <div class="success-msg" id="hero-success">
+        <div class="check">✓</div>
+        <h3>You're on the list.</h3>
+        <p>I'll send it the moment it's ready. That's the only email you'll get.</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider"></div>
+
+  <!-- TROUBLE -->
+  <section class="section">
+    <div class="section-label">The real problem</div>
+    <h2>You've tried AI. You got no outcome.</h2>
+
+    <p>You work 13, 14, maybe 16 hours a day. The to-do list never empties. You can't take a day off without something breaking. Everything — every decision, every process, every answer — lives in your head.</p>
+
+    <p>You built this business to be free. Instead, <strong>the business owns you.</strong></p>
+
+    <p>So you tried AI. You connected tools. Set up automations. Maybe hired someone to build workflows. But nothing really changed. The bottlenecks are still there — and now there's more complexity to manage on top of everything else.</p>
+
+    <div class="quote-block">
+      <p>"AI doesn't fix a broken process. It scales it."</p>
+    </div>
+
+    <p>The problem isn't you. And it isn't the technology. <strong>It's that you started automating before you had a system.</strong> Before you knew what was worth automating, and why.</p>
+
+    <ul class="problem-list">
+      <li>You automate tasks that shouldn't exist in the first place</li>
+      <li>You build workflows only you understand how to fix</li>
+      <li>You add tools that create new dependencies instead of removing old ones</li>
+      <li>You invest time in setup and see no visible change in how the business runs</li>
+    </ul>
+  </section>
+
+  <!-- OUTCOME -->
+  <section class="section">
+    <div class="section-label">What changes</div>
+    <h2>A clear map before you build anything.</h2>
+
+    <p>What if you knew — specifically — which parts of your business are bleeding time and money, which ones are ready for AI right now, and what to build in what order?</p>
+
+    <p>Not another tool recommendation. Not a generic framework that doesn't fit your business. <strong>A clear, prioritized map — for your actual operation.</strong></p>
+
+    <p>You take a week off. Your team keeps moving. Decisions get made. Nothing breaks. That's the outcome a real system delivers.</p>
+  </section>
+
+  <!-- INSIDE -->
+  <section class="section">
+    <div class="section-label">What's inside</div>
+    <h2>The AI Business Growth Playbook</h2>
+
+    <p>A step-by-step guide for business owners who've tried AI automation — and want to finally make it work for their actual business, not a demo version of it.</p>
+
+    <div class="inside-box">
+      <div class="inside-box-header">What the playbook covers — 9 stages</div>
+
+      <div class="inside-item">
+        <div class="inside-num">1</div>
+        <div class="inside-text">
+          <strong>Why your business runs on you — not on a system</strong>
+          We start with the real problem: everything lives in your head. You'll see exactly why the business stalls the moment you step back — and why adding more tools won't fix it.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">2</div>
+        <div class="inside-text">
+          <strong>What a system actually is</strong>
+          A simple, clear definition of what a business system looks like in practice. You'll be able to name every system in your business and understand how they connect.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">3</div>
+        <div class="inside-text">
+          <strong>Finding your most important system</strong>
+          Start with your business goal — then identify which systems are most critical to reaching it. You'll build your business structure inside Notion and know exactly where to focus first.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">4</div>
+        <div class="inside-text">
+          <strong>Documenting how your business actually works</strong>
+          Map every process inside your key system in enough detail that anyone — with zero background — could run it. No more tribal knowledge. No more "only I know how this works."
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">5</div>
+        <div class="inside-text">
+          <strong>Deciding what to automate — and what to leave alone</strong>
+          A clear framework for evaluating each process: is it repetitive, time-sensitive, or specialist work? You'll categorize every process and know exactly which ones are AI-ready and which aren't.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">6</div>
+        <div class="inside-text">
+          <strong>Choosing the right AI tools for each job</strong>
+          Not every task needs the same tool. You'll learn what each tool does well — Claude Projects, Claude Skills, Claude Code, Cowork — and match the right one to the right process.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">7</div>
+        <div class="inside-text">
+          <strong>Building your first AI agent — step by step</strong>
+          We build it together. By the end of this stage, you have a working AI agent running inside your actual business — not a demo, not a template.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">8</div>
+        <div class="inside-text">
+          <strong>Evaluating and improving what you've built</strong>
+          How to measure whether your AI system is actually working — and how to improve it over time. Includes a practical evaluation checklist you'll use on a regular cadence.
+        </div>
+      </div>
+
+      <div class="inside-item">
+        <div class="inside-num">9</div>
+        <div class="inside-text">
+          <strong>The next system — and the loop that keeps going</strong>
+          Once the first system runs without you, you do it again. This stage shows you how to repeat the process across every part of your business until you're no longer the bottleneck anywhere.
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CREDIBILITY -->
+  <section class="section">
+    <div class="section-label">Who's building this</div>
+    <h2>Built by someone who's been on both sides.</h2>
+
+    <div class="cred-block">
+      <div class="cred-avatar">
+        <!--
+          Replace the img src below with your actual photo URL once uploaded to GitHub.
+          Example: src="https://raw.githubusercontent.com/YOUR_USERNAME/YOUR_REPO/main/ahad.jpg"
+          If no photo is available, the fallback initial "A" will show instead.
+        -->
+        <img
+          src="YOUR_PHOTO_URL"
+          alt="Ahad Saeidi"
+          onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+        />
+        <span class="avatar-fallback" style="display:none;">A</span>
+      </div>
+      <div class="cred-text">
+        <div class="cred-name">Ahad Saeidi</div>
+        <span class="cred-tag">Business Systemization Expert · The Netherlands</span>
+        <p>I've launched three businesses — including an AR/VR startup and a technical service marketplace I exited successfully. I've evaluated hundreds of companies from the investor side as a VP and Portfolio Manager at a VC firm. Today I run a one-person operation entirely on AI-powered systems — and I'm documenting every part of how I built it, so you can do the same.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <div class="bottom-cta">
+    <h2>Get the Playbook First</h2>
+    <p>I'm building it in public. Join the list — one email when it's ready. Nothing else.</p>
+
+    <div id="bottom-form-wrap">
+      <form id="bottom-form" action="YOUR_BREVO_FORM_ACTION_URL" method="POST" onsubmit="handleSubmit(event,'bottom-form-wrap','bottom-success')">
+        <input type="hidden" name="list" value="YOUR_LIST_ID" />
+        <div class="form-row">
+          <input type="email" name="EMAIL" placeholder="Your work email" required autocomplete="email" />
+          <button type="submit" class="btn-submit">I'm In →</button>
+        </div>
+      </form>
+
+      <div class="success-msg" id="bottom-success">
+        <div class="check">✓</div>
+        <h3>You're on the list.</h3>
+        <p>I'll send it the moment it's ready.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-left">
+      <p>© 2026 <a href="https://solopreneurac.com">Solopreneur Academy</a> · The Netherlands</p>
+    </div>
+
+    <div class="social-links">
+      <!-- LinkedIn -->
+      <a href="https://www.linkedin.com/in/ahadsaeidi/" target="_blank" rel="noopener" aria-label="LinkedIn">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+
+      <!-- Instagram -->
+      <a href="https://www.instagram.com/ad_saeidi/" target="_blank" rel="noopener" aria-label="Instagram">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+
+      <!-- X / Twitter -->
+      <a href="https://x.com/Ad_Saeidi" target="_blank" rel="noopener" aria-label="X (Twitter)">
+        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+</div>
+
+<script>
+  async function handleSubmit(e, wrapId, successId) {
+    e.preventDefault();
+    const form = e.target;
+    const action = form.getAttribute('action');
+
+    if (action === 'YOUR_BREVO_FORM_ACTION_URL') {
+      showSuccess(form, wrapId, successId);
+      return;
+    }
+
+    try {
+      const formData = new FormData(form);
+      await fetch(action, { method: 'POST', body: formData, mode: 'no-cors' });
+    } catch (_) {}
+
+    showSuccess(form, wrapId, successId);
+  }
+
+  function showSuccess(form, wrapId, successId) {
+    form.style.display = 'none';
+    const note = form.querySelector('.form-note');
+    if (note) note.style.display = 'none';
+    const success = document.getElementById(successId);
+    if (success) success.style.display = 'block';
+  }
+</script>
+
+</body>
+</html>
