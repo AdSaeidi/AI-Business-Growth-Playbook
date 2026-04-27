@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>You're in — Ahad Saeidi</title>
+<meta name="description" content="The AI Readiness Blueprint is on its way to your inbox." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg: #EEF3FA;
+    --surface: #FFFFFF;
+    --teal: #00C4B3;
+    --lime: #C5FF3E;
+    --navy-deep: #0A1A2F;
+    --navy-mid: #2A4A6F;
+    --navy-soft: #5A7494;
+    --rule: #D5DEE9;
+    --rule-strong: #B8C5D6;
+
+    --dark-bg: #0A1A2F;
+    --dark-bg-elevated: #11243F;
+    --dark-text: #FFFFFF;
+    --dark-text-muted: rgba(255,255,255,0.65);
+    --dark-text-soft: rgba(255,255,255,0.45);
+    --dark-rule: rgba(255,255,255,0.12);
+
+    --sans: "Inter", -apple-system, system-ui, sans-serif;
+    --mono: "JetBrains Mono", monospace;
+  }
+
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    background: var(--bg);
+    color: var(--navy-deep);
+    font-family: var(--sans);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .wrap{
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 32px;
+    position:relative;
+  }
+
+  /* ── DARK HERO ── */
+  .dark-section{
+    background: var(--dark-bg);
+    color: var(--dark-text);
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+  }
+  .dark-section::before{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image:
+      radial-gradient(circle at 1px 1px, rgba(0,196,179,0.07) 1px, transparent 0);
+    background-size: 32px 32px;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .dark-section::after{
+    content: "";
+    position: absolute;
+    top: -200px;
+    right: -200px;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0,196,179,0.12) 0%, transparent 60%);
+    pointer-events: none;
+  }
+
+  /* ── NAV ── */
+  nav{
+    padding: 28px 0;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom: 1px solid var(--dark-rule);
+    position: relative;
+    z-index: 2;
+  }
+  .logo{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 17px;
+    letter-spacing: -0.01em;
+    color: var(--dark-text);
+    text-decoration: none;
+  }
+  .logo span{color: var(--teal)}
+  .nav-meta{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--dark-text-soft);
+  }
+
+  /* ── HERO CONTENT ── */
+  .hero{
+    padding: 100px 0 110px;
+    position: relative;
+    z-index: 2;
+    max-width: 740px;
+  }
+
+  .label{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 36px;
+    font-weight: 500;
+  }
+  .label::before{
+    content: "";
+    width: 24px; height: 1px;
+    background: var(--teal);
+  }
+
+  h1.headline{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(38px, 5.6vw, 68px);
+    line-height: 1.05;
+    letter-spacing: -0.025em;
+    color: var(--dark-text);
+  }
+  h1.headline em{
+    font-style: normal;
+    color: var(--navy-deep);
+    background: var(--lime);
+    padding: 0 10px;
+    border-radius: 4px;
+    box-decoration-break: clone;
+    -webkit-box-decoration-break: clone;
+  }
+
+  .subhead{
+    margin-top: 28px;
+    font-size: clamp(16px, 1.3vw, 18px);
+    line-height: 1.65;
+    color: var(--dark-text-muted);
+    max-width: 58ch;
+  }
+
+  /* ── INBOX NOTICE ── */
+  .inbox-notice{
+    margin-top: 40px;
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 16px;
+    background: rgba(0,196,179,0.08);
+    border: 1px solid rgba(0,196,179,0.25);
+    border-radius: 8px;
+    padding: 18px 22px;
+    max-width: 560px;
+  }
+  .inbox-notice .dot{
+    width: 8px; height: 8px;
+    background: var(--teal);
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 6px;
+  }
+  .inbox-notice p{
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--dark-text-muted);
+  }
+  .inbox-notice p strong{
+    color: var(--dark-text);
+    font-weight: 500;
+  }
+
+  /* ── MAIN CONTENT (LIGHT) ── */
+  .main-content{
+    flex: 1;
+  }
+
+  /* ── NOTION SECTION ── */
+  .notion-section{
+    margin: 80px 0 0;
+  }
+
+  .section-tag{
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--teal);
+    margin-bottom: 24px;
+    font-weight: 500;
+  }
+
+  .notion-card{
+    background: var(--surface);
+    border: 1px solid var(--rule-strong);
+    border-radius: 12px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    gap: 40px;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .notion-card::before{
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px;
+    height: 100%;
+    background: var(--teal);
+    border-radius: 12px 0 0 12px;
+  }
+
+  .notion-card h2{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: clamp(22px, 2.2vw, 28px);
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    color: var(--navy-deep);
+    margin-bottom: 16px;
+  }
+  .notion-card h2 em{
+    font-style: normal;
+    color: var(--teal);
+  }
+  .notion-card p{
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--navy-soft);
+    max-width: 52ch;
+  }
+
+  .btn-notion{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    background: var(--navy-deep);
+    color: var(--lime);
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 15px;
+    padding: 16px 28px;
+    border-radius: 6px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: opacity 0.15s, transform 0.15s;
+    letter-spacing: -0.01em;
+  }
+  .btn-notion:hover{opacity: 0.87; transform: translateY(-1px)}
+  .btn-notion::after{
+    content: "→";
+    transition: transform .25s;
+  }
+  .btn-notion:hover::after{transform: translateX(4px)}
+
+  /* ── DIVIDER ── */
+  .divider{
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 64px 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .divider-label{
+    position: absolute;
+    background: var(--bg);
+    padding: 0 16px;
+    font-family: var(--mono);
+    font-size: 10px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--navy-soft);
+  }
+
+  /* ── REPLY SECTION ── */
+  .reply-section{
+    margin-bottom: 80px;
+  }
+
+  .reply-card{
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 12px;
+    padding: 48px;
+    max-width: 680px;
+  }
+  .reply-card h3{
+    font-family: var(--sans);
+    font-weight: 600;
+    font-size: 20px;
+    letter-spacing: -0.015em;
+    color: var(--navy-deep);
+    margin-bottom: 16px;
+  }
+  .reply-card p{
+    font-size: 16px;
+    line-height: 1.7;
+    color: var(--navy-soft);
+    margin-bottom: 12px;
+  }
+  .reply-card p:last-child{margin-bottom: 0}
+  .reply-card .question{
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--navy-deep);
+    font-style: italic;
+    border-left: 3px solid var(--teal);
+    padding-left: 20px;
+    margin: 24px 0;
+  }
+  .reply-card .sig{
+    font-family: var(--mono);
+    font-size: 13px;
+    color: var(--navy-soft);
+    letter-spacing: 0.04em;
+    margin-top: 24px;
+  }
+  .reply-card .sig strong{color: var(--navy-deep)}
+
+  /* ── FOOTER ── */
+  footer{
+    border-top: 1px solid var(--rule-strong);
+    padding: 28px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--mono);
+    font-size: 11px;
+    letter-spacing: 0.06em;
+    color: var(--navy-soft);
+    text-transform: uppercase;
+  }
+
+  /* ── ANIMATIONS ── */
+  .reveal-up{
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealUp 0.6s ease forwards;
+  }
+  @keyframes revealUp{to{opacity: 1; transform: translateY(0)}}
+  .d1{animation-delay: .1s}
+  .d2{animation-delay: .25s}
+  .d3{animation-delay: .4s}
+  .d4{animation-delay: .55s}
+  .d5{animation-delay: .7s}
+
+  /* ── RESPONSIVE ── */
+  @media(max-width: 720px){
+    .wrap{padding: 0 22px}
+    .hero{padding: 70px 0 80px}
+    .notion-card{
+      grid-template-columns: 1fr;
+      padding: 32px 28px;
+      gap: 28px;
+    }
+    .btn-notion{width: 100%; justify-content: center}
+    .reply-card{padding: 32px 28px}
+    footer{flex-direction: column; gap: 8px; text-align: center}
+  }
+</style>
+</head>
+<body>
+
+<!-- ════════════ DARK HERO ════════════ -->
+<section class="dark-section">
+  <div class="wrap">
+    <nav>
+      <a href="#" class="logo">Ahad <span>Saeidi</span></a>
+      <div class="nav-meta">Business First. AI Next.</div>
+    </nav>
+
+    <div class="hero">
+      <div class="label reveal-up d1">/ confirmed</div>
+      <h1 class="headline reveal-up d2">You're <em>in.</em></h1>
+      <p class="subhead reveal-up d3">
+        The blueprint is on its way to your inbox.
+      </p>
+
+      <div class="inbox-notice reveal-up d4">
+        <div class="dot"></div>
+        <p>Check your inbox in the next minute or two. If you don't see it, look in <strong>Promotions or Spam</strong> — then move it back, so the next letter actually lands.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ════════════ LIGHT CONTENT ════════════ -->
+<div class="main-content">
+  <div class="wrap">
+
+    <!-- NOTION SECTION -->
+    <div class="notion-section reveal-up d5">
+      <div class="section-tag">/ your next step</div>
+
+      <div class="notion-card">
+        <div>
+          <h2>The Notion workspace is <em>ready for you.</em></h2>
+          <p>
+            The blueprint isn't just a PDF to read and forget. It comes with a Notion template built for the same framework — so you can map your business, document your processes, and track what's worth automating. Open it now and make a copy before you forget.
+          </p>
+        </div>
+        <a href="https://tremendous-year-2ac.notion.site/Your-Blueprint-18fb0d95e78b82af95d20151c588be77?source=copy_link" target="_blank" rel="noopener" class="btn-notion">
+          Open the Notion Template
+        </a>
+      </div>
+    </div>
+
+    <div class="divider"><span class="divider-label">One more thing</span></div>
+
+    <!-- REPLY SECTION -->
+    <div class="reply-section">
+      <div class="reply-card">
+        <h3>Reply to the first email.</h3>
+        <p>When it lands, reply and tell me:</p>
+        <p class="question">What's the one part of your business you most want to stop doing yourself?</p>
+        <p>I read every reply. And it usually becomes the starting point for everything else.</p>
+        <div class="sig">— <strong>Ahad Saeidi</strong></div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ════════════ FOOTER ════════════ -->
+<div class="wrap">
+  <footer>
+    <div>© 2026 Ahad Saeidi · Business First. AI Next.</div>
+    <div>Made with structure</div>
+  </footer>
+</div>
+
+</body>
+</html>
