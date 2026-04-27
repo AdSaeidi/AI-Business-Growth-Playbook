@@ -910,10 +910,8 @@
     errorMsg.textContent = '';
     errorMsg.classList.remove('visible');
   }
-  function showSuccess(){
-    formContainer.style.display = 'none';
-    successMsg.classList.add('visible');
-    successMsg.scrollIntoView({behavior:'smooth', block:'center'});
+function showSuccess(){
+    window.location.href = 'thank-you.html';
   }
 
   form.addEventListener('submit', async function(e){
