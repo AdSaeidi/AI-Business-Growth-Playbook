@@ -880,7 +880,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>Send it to my inbox and I'll send the PDF and Notion template right back. No upsell sequence. Just the work, plus an occasional letter when I have something worth your attention.</p>
 
       <form id="lead-form" action="https://brevo-api-worker.solopreneurac.workers.dev/" method="POST" novalidate>
-        <input type="email" name="email" id="email" placeholder="Email address" required autocomplete="email" />
+        <input type="email" name="EMAIL" id="email" placeholder="Email address" required autocomplete="email" />
         <button type="submit" id="submit-btn">Send me the blueprint</button>
         <div class="error-msg" id="error-msg"></div>
       </form>
@@ -934,15 +934,15 @@ function showSuccess(){
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending...';
 
-    const action = form.getAttribute('action');
-    if(action === 'https://brevo-api-worker.solopreneurac.workers.dev/'){
-      showSuccess();
-      return;
-    }
-
     try{
-      const formData = new FormData(form);
-      await fetch(action, { method: 'POST', body: formData, mode: 'no-cors' });
+      const action = form.getAttribute('action');
+      const params = new URLSearchParams({ EMAIL: email });
+      const res = await fetch(action, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: params
+      });
+      if(!res.ok) throw new Error('Server error: ' + res.status);
       showSuccess();
     } catch(err){
       showError('Connection issue. Check your network and try again.');
