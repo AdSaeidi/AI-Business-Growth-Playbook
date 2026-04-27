@@ -1,6 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VNXNP4WLSP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-VNXNP4WLSP');
+</script>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>The AI Readiness Blueprint — Ahad Saeidi</title>
@@ -862,7 +871,7 @@
       <h2>Find what's <em>worth</em> automating.</h2>
       <p>Send it to my inbox and I'll send the PDF and Notion template right back. No upsell sequence. Just the work, plus an occasional letter when I have something worth your attention.</p>
 
-      <form id="lead-form" action="YOUR_BREVO_FORM_ACTION_URL" method="POST" novalidate>
+      <form id="lead-form" action="https://brevo-api-worker.solopreneurac.workers.dev/" method="POST" novalidate>
         <input type="email" name="email" id="email" placeholder="Email address" required autocomplete="email" />
         <button type="submit" id="submit-btn">Send me the blueprint</button>
         <div class="error-msg" id="error-msg"></div>
@@ -920,7 +929,7 @@
     submitBtn.textContent = 'Sending...';
 
     const action = form.getAttribute('action');
-    if(action === 'YOUR_BREVO_FORM_ACTION_URL'){
+    if(action === 'https://brevo-api-worker.solopreneurac.workers.dev/'){
       showSuccess();
       return;
     }
